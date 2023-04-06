@@ -1,0 +1,10 @@
+S C:\mydev\learning\alchemy-university\ecdsa-node\server> node .\script\generate.js
+private key: 968e94b88838875cd5a74555c2cd96f8a9893a16f908f7352143b64f4f8a3e07
+public key:04c546a8b319fe401b680f795047f5472a5cb6521a012b63ab0a6c92de2c5f522c987c17b6e7b3359c94b33a261eefeb701a501a1e57613ff07bce563b427084df      
+PS C:\mydev\learning\alchemy-university\ecdsa-node\server> node .\script\generate.js
+private key: 2b05a67f1b693a42fe93dc351a4524599716747df3798d285e10b3fd5bd87b2e
+public key:048cf5078e2be58b50ffe47a85880bd2e3d67921b419fe4b79a019f63ec6472886359ab46118d7b7b11553ef399923c6d58e2bb10d6089aa7ca4b1317b0a37dab0      
+PS C:\mydev\learning\alchemy-university\ecdsa-node\server> node .\script\generate.js
+private key: a5a2831b2a22e8725566824ebb494b67be362feecb1bbeb317556122bdf7a4c5
+public key:04958560e82722ac4fd157b656ee4aa2fa558ecdd4c587e618b2776d7317956a5a4d9194ab6e6f92d584782874827ca35ac6c6c7e7ccf7cf9e0444f7a3eb97f858      
+PS C:\mydev\learning\alchemy-university\ecdsa-node\server>
