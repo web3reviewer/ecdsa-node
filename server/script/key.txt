@@ -8,3 +8,12 @@ PS C:\mydev\learning\alchemy-university\ecdsa-node\server> node .\script\generat
 private key: a5a2831b2a22e8725566824ebb494b67be362feecb1bbeb317556122bdf7a4c5
 public key:04958560e82722ac4fd157b656ee4aa2fa558ecdd4c587e618b2776d7317956a5a4d9194ab6e6f92d584782874827ca35ac6c6c7e7ccf7cf9e0444f7a3eb97f858      
 PS C:\mydev\learning\alchemy-university\ecdsa-node\server>
+
+Message :  {
+  from: '04c546a8b319fe401b680f795047f5472a5cb6521a012b63ab0a6c92de2c5f522c987c17b6e7b3359c94b33a261eefeb701a501a1e57613ff07bce563b427084df',
+  to: '048cf5078e2be58b50ffe47a85880bd2e3d67921b419fe4b79a019f63ec6472886359ab46118d7b7b11553ef399923c6d58e2bb10d6089aa7ca4b1317b0a37dab0',
+  amount: 10
+}
+Hashed Message :  b6ed86d6795fc6af7c93e3765ea97ce216ff8d024754d3e6861a911aee87572c
+Signature :  304402204e1e7da2099c3b539a2a0429ee4b3a57d4c8edbce98179054ec5a45bb538a8a602205c39a59b7c2122e2e654941b5c3cf967363edfcb4e96c2a7cad41c497263cd07
+Recovery Bit :  0

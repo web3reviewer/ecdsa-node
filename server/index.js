@@ -1,3 +1,6 @@
+const { keccak256 } = require("ethereum-cryptography/keccak");
+const { utf8ToBytes, toHex } = require("ethereum-cryptography/utils");
+const secp = require("ethereum-cryptography/secp256k1");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -20,8 +23,20 @@ app.get("/balance/:address", (req, res) => {
 
 app.post("/send", (req, res) => {
   //TODO: get a signature from the client side and recover the public address from the signature
-  const { sender, recipient, amount } = req.body;
+  //check if the pu
+  const { sender, recipient, amount, signature, publicKey, recoverBit } = req.body;
+  let message = {
+    from: sender,
+    to: recipient,
+    amount: amount,
+};
+console.log("Message : ", message);
+const messageHash = toHex(keccak256(utf8ToBytes(JSON.stringify(message))));
+console.log("Hashed Message : ", messageHash);
 
+console.log("recover Public Key: " + toHex(secp.recoverPublicKey(messageHash, signature, recoverBit)));
+console.log("Public Key: " + publicKey);
+if(toHex(secp.recoverPublicKey(messageHash, signature, recoverBit)) === publicKey){
   setInitialBalance(sender);
   setInitialBalance(recipient);
 
@@ -32,6 +47,10 @@ app.post("/send", (req, res) => {
     balances[recipient] += amount;
     res.send({ balance: balances[sender] });
   }
+} else {
+  res.status(400).send({ message: "Not right public key!" });
+}
+
 });
 
 app.listen(port, () => {
